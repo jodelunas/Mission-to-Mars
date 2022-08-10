@@ -9,12 +9,21 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <link href="{{ url_for('static', filename='css/style.css') }}" />
+    <style>
+      body {background-color: lightslategray;}
+      h1   {color: black;}
+      p    {color: darkslategrey;}
+      h3   {color: darkorange}
+      div  {color: darkslategrey}
+     </style> 
+  
   </head>
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
+      <div class="jumbotron text-center" style="background-image: url('https://www.worldatlas.com/r/w1300-q80/upload/bb/c3/32/shutterstock-1041249343.jpg');">
+        <h1 style="color: #FFF;">Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>

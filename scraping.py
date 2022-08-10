@@ -110,20 +110,20 @@ def mars_hemispheres(browser):
     for item in find_items:
         hemispheres = {}
     
-    link = url + item.a['href']
+        link = url + item.a['href']
     
-    browser.visit(link)
-    html = browser.html
-    html_soup = soup(html, "html.parser")
-    image = html_soup.find('img', class_='wide-image')
+        browser.visit(link)
+        html = browser.html
+        html_soup = soup(html, "html.parser")
+        image = html_soup.find('img', class_='wide-image')
     
-    img_url = url + image["src"]
-    title = item.find('h3').text
+        img_url = url + image["src"]
+        title = item.find('h3').text
     
-    hemispheres= {'img_url': img_url, 'title': title}
-    hemisphere_image_urls.append(hemispheres)
+        hemispheres= {'img_url': img_url, 'title': title}
+        hemisphere_image_urls.append(hemispheres)
     
-    browser.back()
+        browser.back()
     
     return hemisphere_image_urls
 if __name__ == "__main__":
